@@ -27,10 +27,6 @@ def worker(i):
 
     article = json.loads(r.text)
     
-    with open(r'rez.text', 'w+') as f:
-        json.dump(article ,f, indent=4)
+    with open(r'rez.text', 'w+', encoding='utf8') as f:
+        json.dump(article ,f, indent=4,  ensure_ascii=False)
     print(r.text)
-    
-
-if __name__ == "__main__":
-    worker(7)
