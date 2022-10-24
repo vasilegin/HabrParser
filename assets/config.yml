@@ -1,5 +1,5 @@
 url:
   parse: 'https://m.habr.com/kek/v2/articles/{0}/?fl=ru%2Cen&hl=ru'
-  database: ''
+  database: 'postgresql://vlad:020799@localhost:5432/habr'
 headers:
   User-Agent: 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/104.0.0.0 Safari/537.36'

@@ -1,4 +1,5 @@
 import click
+from parser.db.base import DB
 
 from multiprocessing.dummy import Pool as ThreadPool
 from datetime import datetime
@@ -20,6 +21,6 @@ def start(min, max, threads):
     pool.close()
     pool.join()
     print(datetime.now() - start_time)
-    
+
 if __name__ == '__main__':
     start()
