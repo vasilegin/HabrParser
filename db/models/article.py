@@ -3,7 +3,7 @@ from sqlalchemy import Column, Integer, String, DateTime
 
 Base = declarative_base()
 
-class Articles(Base):
+class Article(Base):
     __tablename__ = 'articles'
     
     id = Column(Integer, primary_key=True)
@@ -17,7 +17,20 @@ class Articles(Base):
     readingCount = Column(Integer)
     tags = Column(String)
     classes = Column(String)
-    
+
+    def __init__(self, id, tP, lang, titleHtml, textHtml, pL, af, ar, rC, tags, classes ):
+        self.id = id
+        self.timePublished = tP
+        self.lang = lang
+        self.titleHtml = titleHtml
+        self.textHtml = textHtml
+        self.postLabels = pL
+        self.author_fullname = af
+        self.author_rating = ar
+        self.readingCount = rC
+        self.tags = tags
+        self.classes = classes
+
     def __repr__(self):
-        return "<Articles(title='{}', author='{}', published={})>"\
+        return "<Article(title='{}', author='{}', published={})>"\
                 .format(self.titleHtml, self.author_fullname, self.timePublished)

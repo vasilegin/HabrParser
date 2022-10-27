@@ -2,7 +2,6 @@ import imp
 from multiprocessing.dummy import Pool as ThreadPool
 from datetime import datetime
 from parser.parse import worker
-from db.base import Session
 import click
 
 
@@ -24,5 +23,4 @@ def start(min, max, threads):
     print(datetime.now() - start_time)
 
 if __name__ == '__main__':
-    s = Session()
     start()
