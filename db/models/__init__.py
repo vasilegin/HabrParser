@@ -1,1 +1,1 @@
-from .articles import Articles, Base
+from .article import Article, Base
